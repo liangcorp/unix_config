@@ -1,8 +1,9 @@
 #!/bin/sh
 
 num=
-lable=
+label=
 vdev=
+left_over_vdev=
 
 gpart -i "$num" -l "$label" "$vdev"
 

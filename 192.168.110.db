@@ -1,0 +1,23 @@
+$TTL    604800
+@       IN      SOA     sanwei.corp. admin.sanwei.corp. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+; name servers - NS records
+	IN	NS	ns1.sanwei.corp.
+	IN	NS	ns2.sanwei.corp.
+
+; PTR Records
+221	IN	PTR	ns1.sanwei.corp.		; 192.168.110.221
+224	IN	PTR	ns2.sanwei.corp.		; 192.168.110.224
+
+221	IN	PTR	primary.sanwei.corp.		; 192.168.110.221
+221	IN	PTR	haotian_db1.sanwei.corp.	; 192.168.110.221
+
+222	IN	PTR	ai.sanwei.corp.			; 192.168.110.222
+
+223	IN	PTR	secondary.sanwei.corp.		; 192.168.110.223
+225	IN	PTR	haotian_db2.sanwei.corp.	; 192.168.110.225
+226	IN	PTR	ldap-primary.sanwei.corp.	; 192.168.110.226

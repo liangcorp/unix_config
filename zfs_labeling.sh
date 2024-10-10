@@ -1,7 +1,13 @@
-gpart -i $num -l $label $vdev
+#!/bin/sh
 
-zpool detach zroot $vdev
+num=
+lable=
+vdev=
 
-zpool attach zroot $left_over_vdev gpt/$label
+gpart -i "$num" -l "$label" "$vdev"
+
+zpool detach zroot "$vdev"
+
+zpool attach zroot "$left_over_vdev" "gpt/$label"
 
 # repeat for the rest
